@@ -13,23 +13,19 @@
 - (NSString *) favoriteCheeseStringWithCheese:(NSString *)cheeseName {
     /* WORK HERE */
     
-    NSString *cheese = [NSString stringWithFormat:@"My favorite cheese is %@.", cheeseName];
-          
-    return cheese;
+    return [NSString stringWithFormat:@"My favorite cheese is %@.", cheeseName];
+    
 }
-
-
-
 
 
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
     
+    NSString *chesseStatment = cheeseName;
     
-    NSString *chesseStatment = [NSString stringWithFormat:@"%@",cheeseName];
-    NSRange cheeseRange = [chesseStatment rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
-    
-    if (cheeseRange.location != NSNotFound) {
-        
+    //NSRange cheeseRange = [chesseStatment rangeOfString:@" cheese" options:NSCaseInsensitiveSearch | NSBackwardsSearch];
+    //[cheeseRange.
+    if ([[cheeseName lowercaseString] hasSuffix:@" cheese"]) {   //(cheeseRange.location != NSNotFound)
+        NSRange cheeseRange = [chesseStatment rangeOfString:@" cheese" options:NSCaseInsensitiveSearch | NSBackwardsSearch];
         NSString *cheeseCorrectStatement = [chesseStatment stringByReplacingCharactersInRange:cheeseRange withString:@""];
       
         return cheeseCorrectStatement;
@@ -63,12 +59,11 @@
     return nil;
 }
 
+
+
+
+
 @end
-
-
-
-
-
 
 
 
