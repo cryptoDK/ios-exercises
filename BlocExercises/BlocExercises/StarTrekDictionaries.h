@@ -40,6 +40,7 @@
 
  @return An array of favorite drinks.
  */
+//- (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray;
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray;
 
 /**
